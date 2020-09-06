@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@android:color/transparent"
-    tools:background="@color/colorMainBg"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:background="@color/colorMainBg">
 
 
     <TextView
@@ -30,14 +31,19 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/title"
-        android:paddingStart="45dp"
-        android:paddingEnd="45dp"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp"
         android:text="@string/author_context"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        android:textIsSelectable="true"
+        android:textSize="14sp"
+        app:lineHeight="@dimen/sw_60dp" />
 
 
 </RelativeLayout>
