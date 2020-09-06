@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:background="@color/colorMainBg">
+
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            layout="@layout/group_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/space"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/sw_40dp"
+            android:visibility="invisible" />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/new_create_game"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/game_name"
+            android:layout_width="@dimen/sw_900dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/sw_40dp"
+            android:autofillHints="@null"
+            android:gravity="center"
+            android:hint="@string/game_name"
+            android:inputType="text"
+            android:maxLength="7"
+            android:maxLines="1"
+            android:paddingStart="@dimen/sw_40dp"
+            android:paddingEnd="@dimen/sw_40dp"
+            tools:text="213gadafsadf" />
+
+        <TextView
+            android:id="@+id/game_show_type_title"
+            style="@style/AddNewGameTitle"
+            android:layout_below="@id/game_name"
+            android:layout_alignParentStart="true"
+            android:text="@string/show_type" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/game_name"
+            android:layout_alignTop="@id/game_show_type_title"
+            android:layout_alignBottom="@id/game_show_type_title"
+            android:layout_toEndOf="@id/game_show_type_title"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/text"
+                android:textColor="@android:color/black" />
+
+            <RadioButton
+                android:id="@+id/radio_img"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/sw_40dp"
+                android:gravity="center"
+                android:text="@string/img"
+                android:textColor="@android:color/black" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/board_title"
+            style="@style/AddNewGameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/game_show_type_title"
+            android:layout_alignEnd="@id/game_show_type_title"
+            android:layout_alignParentStart="true"
+            android:text="@string/board_size" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/board_size_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/board_title"
+            android:layout_alignBottom="@id/board_title"
+            android:layout_toEndOf="@id/board_title"
+            android:entries="@array/board_size"
+            android:spinnerMode="dialog" />
+
+        <FrameLayout
+            android:id="@+id/content_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/board_title"
+            android:layout_alignStart="@id/board_title"
+            android:layout_toStartOf="@id/space">
+
+            <LinearLayout
+                android:id="@+id/text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/img_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/add_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/content_layout"
+            android:layout_alignStart="@id/board_title"
+            android:layout_marginTop="@dimen/sw_20dp"
+            android:layout_toStartOf="@id/space"
+            android:text="@string/add_item" />
+
+        <Button
+            android:id="@+id/sub"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/add_item"
+            android:layout_alignStart="@id/board_title"
+            android:layout_marginTop="@dimen/sw_20dp"
+            android:layout_toStartOf="@id/space"
+            android:text="@string/sub" />
+
+    </RelativeLayout>
+
+
+</ScrollView>

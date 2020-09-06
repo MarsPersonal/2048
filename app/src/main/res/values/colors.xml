@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorMainBg">#FFD551</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorTransparent">#00ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorOrange">#FF7D00</color>
+    <color name="colorGameBg">#ffbaaca1</color>
+
+    <color name="colorEditBg">#FFD551</color>
+
+    <color name="bg_0">#64ffffff</color>
+    <color name="bg_1">#c0eee4da</color>
+    <color name="bg_2">#c0ede0c8</color>
+    <color name="bg_3">#c0f2b179</color>
+    <color name="bg_4">#c0f59563</color>
+    <color name="bg_5">#c0f67c5f</color>
+    <color name="bg_6">#c0f65e3b</color>
+    <color name="bg_7">#c0edcf72</color>
+    <color name="bg_8">#c0edcc61</color>
+    <color name="bg_9">#c0edc850</color>
+    <color name="bg_10">#c0edc53f</color>
+    <color name="bg_11">#c0edc22e</color>
+    <color name="bg_12">#c0ed72cf</color>
+    <color name="bg_13">#c0ed61cc</color>
+    <color name="bg_14">#c0ed50c8</color>
+    <color name="bg_15">#c0ed3fc5</color>
+    <color name="bg_16">#c0ed2ec2</color>
+    <color name="bg_17">#c0d400e8</color>
+    <color name="bg_18">#c0b400e8</color>
+    <color name="bg_19">#c09400e8</color>
+    <color name="bg_20">#c07400e8</color>
+    <color name="bg_21">#c05400e8</color>
+
+</resources>

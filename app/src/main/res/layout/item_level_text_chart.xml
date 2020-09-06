@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/sw_10dp"
+    android:paddingBottom="@dimen/sw_10dp"
+    tools:background="#fff">
+
+    <TextView
+        android:id="@+id/equal"
+        android:layout_width="@dimen/sw_125dp"
+        android:layout_height="@dimen/sw_125dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/equal_sign"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="@dimen/sw_125dp"
+        android:layout_height="@dimen/sw_125dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/sw_125dp"
+        android:layout_toStartOf="@id/equal"
+        android:background="@drawable/circle_round_angle_bg_shape"
+        android:gravity="center"
+        android:textSize="18sp"
+        tools:text="1"
+        tools:textColor="#fff" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/correspond"
+        android:layout_width="@dimen/sw_125dp"
+        android:layout_height="@dimen/sw_125dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/sw_125dp"
+        android:layout_toEndOf="@id/equal"
+        android:background="@drawable/circle_round_angle_bg_shape"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingStart="@dimen/sw_20dp"
+        android:paddingEnd="@dimen/sw_20dp"
+        app:autoSizeMaxTextSize="18sp"
+        app:autoSizeMinTextSize="1sp"
+        app:autoSizeTextType="uniform"
+        tools:text="火星人"
+        tools:textColor="#fff" />
+
+
+</RelativeLayout>

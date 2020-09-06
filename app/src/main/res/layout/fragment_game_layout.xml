@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/game_name_background"
+        android:layout_width="@dimen/sw_260dp"
+        android:layout_height="@dimen/sw_260dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/sw_60dp"
+        android:layout_marginTop="@dimen/sw_100dp"
+        android:contentDescription="@null"
+        android:src="@drawable/bg01" />
+
+    <TextView
+        android:id="@+id/game_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/game_name_background"
+        android:layout_alignTop="@id/game_name_background"
+        android:layout_alignEnd="@id/game_name_background"
+        android:layout_marginTop="@dimen/sw_80dp"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sw_80sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/game_mode_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/game_title"
+        android:layout_alignStart="@id/game_title"
+        android:layout_alignEnd="@id/game_title"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/colorWhite"
+        app:autoSizeTextType="uniform"
+        tools:text="经典模式" />
+
+    <com.lear.game2048.view.ScoreBoardView
+        android:id="@+id/game_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/game_name_background"
+        android:layout_centerHorizontal="true"
+        tools:score="0"
+        tools:title="得分" />
+
+    <com.lear.game2048.view.ScoreBoardView
+        android:id="@+id/game_max_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/game_score"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/sw_60dp"
+        tools:score="2048"
+        tools:title="最大得分" />
+
+
+    <Button
+        android:id="@+id/game_menu"
+        style="@style/GameButton"
+        android:layout_below="@id/game_score"
+        android:layout_alignStart="@id/game_score"
+        android:layout_alignEnd="@id/game_score"
+        android:text="@string/menu" />
+
+    <Button
+        android:id="@+id/new_game"
+        style="@style/GameButton"
+        android:layout_below="@id/game_max_score"
+        android:layout_alignStart="@id/game_max_score"
+        android:layout_alignEnd="@id/game_max_score"
+        android:text="@string/new_game" />
+
+    <TextView
+        android:id="@+id/game_prompt_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/game_menu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/sw_50dp"
+        android:gravity="center"
+        android:paddingTop="@dimen/sw_10dp"
+        android:paddingBottom="@dimen/sw_10dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:drawableEndCompat="@drawable/ic_baseline_help_outline_12"
+        tools:drawableEnd="@drawable/ic_baseline_help_outline_12"
+        tools:text="游戏提示文本" />
+
+    <com.lear.game2048.view.GameDrawView
+        android:id="@+id/game_canvas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/game_prompt_text"
+        android:layout_marginTop="@dimen/sw_30dp" />
+
+
+</RelativeLayout>

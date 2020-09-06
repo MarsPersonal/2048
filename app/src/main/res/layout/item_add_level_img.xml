@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@android:color/transparent"
+    tools:background="@color/colorMainBg">
+
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="@dimen/sw_180dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="16." />
+
+    <com.lear.game2048.view.LevelImageView
+        android:id="@+id/level_img"
+        android:layout_width="@dimen/sw_180dp"
+        android:layout_height="@dimen/sw_180dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/sw_80dp"
+        android:layout_toEndOf="@id/level"
+        android:padding="@dimen/sw_10dp" />
+
+    <ImageButton
+        android:id="@+id/remove"
+        android:layout_width="@dimen/sw_188dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_baseline_remove_24" />
+</RelativeLayout>

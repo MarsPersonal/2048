@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/circle_round_angle_bg_shape">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/setting"
+        android:textColor="@android:color/black"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/sound_effect"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:gravity="center"
+        android:text="@string/sound_effect"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sound_effect_switch"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:layout_alignBottom="@id/sound_effect"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/sound_effect"
+        android:checked="true"
+        android:longClickable="false"
+        android:theme="@style/SwitchCompatStyle"
+        app:colorControlActivated="#0f0"
+        app:showText="false"
+        app:switchPadding="5dp" />
+
+    <TextView
+        android:id="@+id/frame_rate_text"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sound_effect_switch"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:text="@string/high_frame_rate_mode"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/frame_rate"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@id/frame_rate_text"
+        android:layout_alignBottom="@id/frame_rate_text"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/frame_rate_text"
+        android:checked="true"
+        android:longClickable="false"
+        android:theme="@style/SwitchCompatStyle"
+        app:showText="false"
+        app:switchPadding="5dp" />
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_default_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:paddingBottom="@dimen/sw_20dp">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="@dimen/sw_640dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingTop="@dimen/sw_20dp"
+        android:paddingBottom="@dimen/sw_20dp"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        tools:text="通关成功" />
+
+    <EditText
+        android:id="@+id/user_name"
+        android:layout_width="@dimen/sw_630dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_title"
+        android:layout_alignEnd="@id/dialog_title"
+        android:layout_centerInParent="true"
+        android:autofillHints="@null"
+        android:background="@drawable/settlement_edit_background"
+        android:gravity="center"
+        android:inputType="text"
+        android:maxEms="6"
+        android:maxLength="6"
+        android:maxLines="1"
+        android:paddingTop="@dimen/sw_20dp"
+        android:paddingBottom="@dimen/sw_20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        tools:ignore="LabelFor"
+        tools:text="34外星人BCabc..." />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_name"
+        android:layout_alignStart="@id/dialog_title"
+        android:layout_alignEnd="@id/dialog_title"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        tools:text="你的分数是：1234566" />
+
+    <Button
+        android:id="@+id/positive_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message"
+        android:layout_alignStart="@id/dialog_title"
+        android:layout_alignEnd="@id/dialog_title"
+        android:layout_marginTop="@dimen/sw_30dp"
+        tools:text="返回菜单" />
+
+    <Button
+        android:id="@+id/negative_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/positive_button"
+        android:layout_alignStart="@id/dialog_title"
+        android:layout_alignEnd="@id/dialog_title"
+        tools:text="返回菜单" />
+
+</RelativeLayout>

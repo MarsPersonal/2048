@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B6B6B6">
+
+    <!--    <GridView-->
+    <!--        android:id="@+id/grid_view"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:horizontalSpacing="5dp"-->
+    <!--        android:verticalSpacing="5dp" />-->
+
+    <com.lear.game2048.view.VarietyImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <View
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#ee555555" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignStart="@id/top"
+        android:layout_alignTop="@id/top"
+        android:layout_alignBottom="@id/top"
+        android:background="@android:color/transparent"
+        android:paddingStart="@dimen/sw_60dp"
+        android:paddingEnd="@dimen/sw_60dp"
+        android:text="@string/cancel"
+        android:textColor="@android:color/white" />
+
+
+    <Button
+        android:id="@+id/sub"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignEnd="@id/top"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/clrcle_sub_bg_shape"
+        android:paddingStart="@dimen/sw_30dp"
+        android:paddingEnd="@dimen/sw_30dp"
+        android:text="@string/sub"
+        android:textColor="@android:color/black" />
+
+    <!--    <androidx.appcompat.widget.AppCompatSpinner-->
+    <!--        android:id="@+id/spinner"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerHorizontal="true" />-->
+
+
+</RelativeLayout>

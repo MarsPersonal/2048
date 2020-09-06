@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@android:color/transparent"
+    android:padding="@dimen/sw_25dp"
+    tools:background="@color/colorMainBg">
+
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="@dimen/sw_180dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="16." />
+
+    <EditText
+        android:id="@+id/level_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@id/remove"
+        android:layout_toEndOf="@id/level"
+        android:autofillHints="@null"
+        android:inputType="text"
+        android:maxLength="8"
+        android:maxLines="1"
+        android:paddingStart="@dimen/sw_20dp"
+        android:paddingEnd="@dimen/sw_20dp"
+        tools:ignore="LabelFor" />
+
+    <ImageButton
+        android:id="@+id/remove"
+        android:layout_width="@dimen/sw_188dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_baseline_remove_24" />
+
+</RelativeLayout>

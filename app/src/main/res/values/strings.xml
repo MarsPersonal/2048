@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">2048</string>
+    <string name="action_settings">Settings</string>
+    <string name="start_game">开始游戏</string>
+    <string name="diy_game">自定义游戏</string>
+    <string name="setting">设置</string>
+    <string name="author">关于作者</string>
+    <string name="leader_board">排行榜</string>
+    <string name="mode_sclassic">经典模式</string>
+    <string name="mode_picture">图片模式</string>
+    <string name="exit_game">退出游戏</string>
+    <string name="score">得分</string>
+    <string name="max_score">最高分</string>
+    <string name="menu">菜单</string>
+    <string name="new_game">新游戏</string>
+    <string name="restart_game">再来一局</string>
+    <string name="back_menu">返回菜单</string>
+    <string name="you_score">你的分数：%d</string>
+    <string name="do_you_remember_your_name">还记得你的名字吗？</string>
+    <string name="sub">确定</string>
+
+    <string name="author_context">这个作者很懒，很什么都不想说</string>
+    <string name="bgm">B G M</string>
+    <string name="sound_effect">音效</string>
+    <string name="high_frame_rate_mode">高帧率模式</string>
+    <string name="music">音乐</string>
+    <string name="face_expression_empty">╮空空如也╭</string>
+    <string name="me_have_bottom_line">╮我也是有底线的╭</string>
+    <string name="using_help">使用帮助</string>
+
+    <string name="game_raiders">\n 1、最大数尽可能放在角落。\n
+        2、数字按顺序紧邻排列。\n
+        3、首先满足最大数和次大数在的那一列/行是满的。\n
+        4、时刻注意活动较大数（32以上）旁边要有相近的数。\n
+        5、以大数所在的一行为主要移动方向</string>
+    <string name="level_chart">等级对照表</string>
+    <string name="equal_sign">=</string>
+    <string name="new_create_game">新建游戏</string>
+    <string name="game_name">游戏名</string>
+    <string name="show_type">显示类型：</string>
+    <string name="text">文本</string>
+    <string name="img">图片</string>
+    <string name="board_size">棋盘大小：</string>
+    <string name="add_item">添加项</string>
+    <string name="add_data_loading">添加中，请稍等&#8230;</string>
+    <string name="cancel">取消</string>
+    <string name="please_enter_number_letter_or_chinese">请输入数字、字母或中文</string>
+</resources>

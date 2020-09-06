@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?><!DOCTYPE
+    resources[<!ENTITY sql_table_game "game_table">
+    <!ENTITY sql_table_leader_board "leader_board_table">
+    <!ENTITY key_id "id"><!ENTITY key_name "name">
+    <!ENTITY key_mode "mode"><!ENTITY key_display_type "display_type">
+    <!ENTITY key_content "content">
+    <!ENTITY key_check_board_max "check_board_max">
+    <!ENTITY key_user_name "user_name">
+    <!ENTITY key_game_name "game_name">
+    <!ENTITY key_fraction "fraction">
+    <!ENTITY key_date "date">
+    <!ENTITY key_max_level "max_level">]>
+
+<resources>
+
+    <string name="key_id">id</string>
+    <string name="key_name">name</string>
+    <string name="key_mode">mode</string>
+    <string name="key_display_type">display_type</string>
+    <string name="key_content">content</string>
+    <string name="key_check_board_max">check_board_max</string>
+    <string name="key_user_name">user_name</string>
+    <string name="key_game_name">game_name</string>
+    <string name="key_fraction">&key_fraction;</string>
+    <string name="key_date">&key_date;</string>
+    <string name="key_max_level">max_level</string>
+
+    <string name="sql_databases_name">user_databases</string>
+    <string name="sql_table_game">game_table</string>
+    <string name="sql_table_leader_board">leader_board_table</string>
+    <string name="abc">@string/setting</string>
+    <string name="sql_create_game_table">
+        CREATE TABLE IF NOT EXISTS `&sql_table_game;`(
+        `&key_id;` INTEGER PRIMARY KEY AUTOINCREMENT,
+        `&key_name;` TEXT,
+        `&key_mode;` INT,
+        `&key_display_type;` INT,
+        `&key_content;` TEXT,
+        `&key_check_board_max;` INT,
+        `&key_max_level;` INT);
+    </string>
+
+    <string name="sql_create_leader_board_table">
+        CREATE TABLE IF NOT EXISTS `&sql_table_leader_board;`(
+        `&key_id;` INTEGER PRIMARY KEY AUTOINCREMENT,
+        `&key_user_name;` TEXT,
+        `&key_game_name;` TEXT,
+        `&key_fraction;` INT,
+        `&key_date;` DATE)
+    </string>
+
+    <string name="sql_insert_new_score">
+        INSERT INTO `leader_board_table` (`user_name`,`game_name`,`fraction`,`date`) VALUES(\"%1$s\",\"%2$s\",\"%3$d\",date(\'now\'));
+    </string>
+
+    <string name="sql_select_all_score">SELECT * FROM `leader_board_table`;</string>
+</resources>
