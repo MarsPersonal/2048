@@ -53,6 +53,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 
 /**
  * author: song
@@ -64,6 +65,7 @@ public class AddNewGameFragment extends BaseFragment implements View.OnClickList
     public static final String TAG = "AddNewGameFragment";
 
     public static final int REQUEST_CODE = 10;
+
     @BindView(R.id.layout)
     RelativeLayout mLayout;
 
@@ -103,6 +105,7 @@ public class AddNewGameFragment extends BaseFragment implements View.OnClickList
     //当Fragment被隐藏时是否要清除数据
     private boolean isClear;
 
+    private Unbinder mUnbinder;
 
     @Override
     public View onView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -111,7 +114,7 @@ public class AddNewGameFragment extends BaseFragment implements View.OnClickList
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        ButterKnife.bind(this, view);
+        mUnbinder = ButterKnife.bind(this, view);
 
         mTextViews = new ArrayList<>();
         mImageViews = new ArrayList<>();
@@ -163,6 +166,12 @@ public class AddNewGameFragment extends BaseFragment implements View.OnClickList
     public void onStart() {
         super.onStart();
         mGameName.clearFocus();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mUnbinder.unbind();
     }
 
     @Override
@@ -478,7 +487,7 @@ public class AddNewGameFragment extends BaseFragment implements View.OnClickList
                 .setMode(GameTypeModel.MODE_ClASSIC)
                 .setContent(content);
 
-        Log.i(TAG, "getGameTypeModel: size="+model.getCheckerBoardMax());
+        Log.i(TAG, "getGameTypeModel: size=" + model.getCheckerBoardMax());
         return model;
     }
 

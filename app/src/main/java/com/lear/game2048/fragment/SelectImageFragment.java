@@ -22,6 +22,7 @@ import com.lear.game2048.view.VarietyImageView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 
 /**
  * author: song
@@ -49,6 +50,8 @@ public class SelectImageFragment extends BaseFragment implements VarietyImageVie
 
     private ValueAnimator mAnimator;
 
+    private Unbinder mUnbinder;
+
     @Override
     public View onView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_select_image, container, false);
@@ -56,7 +59,7 @@ public class SelectImageFragment extends BaseFragment implements VarietyImageVie
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        ButterKnife.bind(this, view);
+        mUnbinder = ButterKnife.bind(this, view);
         mAnimator = ValueAnimator.ofFloat(1, 0);
         mAnimator.setDuration(100);
         mAnimator.addUpdateListener(animation -> {
@@ -77,6 +80,12 @@ public class SelectImageFragment extends BaseFragment implements VarietyImageVie
     public void onStart() {
         super.onStart();
         mVarietyImageView.load(mUri);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mUnbinder.unbind();
     }
 
     @Override

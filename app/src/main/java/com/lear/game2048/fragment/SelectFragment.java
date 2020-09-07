@@ -80,8 +80,8 @@ public class SelectFragment extends BaseFragment implements
     }
 
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
+    public void onDestroy() {
+        super.onDestroy();
         mUnbinder.unbind();
     }
 
